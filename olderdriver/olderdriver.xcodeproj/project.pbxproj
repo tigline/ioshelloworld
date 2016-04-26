@@ -501,6 +501,7 @@
 				56BB30761CCF42650047DE37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		56BB30771CCF42650047DE37 /* Build configuration list for PBXNativeTarget "olderdriverTests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +510,7 @@
 				56BB30791CCF42650047DE37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		56BB307A1CCF42650047DE37 /* Build configuration list for PBXNativeTarget "olderdriverUITests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +519,7 @@
 				56BB307C1CCF42650047DE37 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

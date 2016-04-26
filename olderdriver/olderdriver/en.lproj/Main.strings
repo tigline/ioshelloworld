@@ -1,0 +1,9 @@
+
+/* Class = "UIButton"; normalTitle = "left"; ObjectID = "Rsi-dv-5T1"; */
+"Rsi-dv-5T1.normalTitle" = "left";
+
+/* Class = "UIButton"; normalTitle = "right"; ObjectID = "o1A-bS-EIj"; */
+"o1A-bS-EIj.normalTitle" = "right";
+
+/* Class = "UILabel"; text = "提示label"; ObjectID = "rDE-Bi-7SY"; */
+"rDE-Bi-7SY.text" = "提示label";
