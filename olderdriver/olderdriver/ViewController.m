@@ -23,13 +23,13 @@
     [super viewDidLoad];
     // statusLabel.textAlignment = UITextAlignmentCenter;
     // Do any additional setup after loading the view, typically from a nib.
-    NSLog(@"[super viewDidLoad];");
+    NSLog(@"viewDidLoad");
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-    NSLog(@"[super didReceiveMemoryWarning];");
+    NSLog(@"didReceiveMemoryWarning");
 }
 
 
@@ -37,7 +37,7 @@
 
 - (IBAction)click:(id)sender{
     statusLabel.text = [abcTextField text];
-
+    
 }
 
 
