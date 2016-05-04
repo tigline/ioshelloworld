@@ -13,11 +13,9 @@
 @end
 
 @implementation ViewController
+@synthesize nameField;
+@synthesize numberField;
 
-@synthesize statusLabel;
-@synthesize leftUIButton;
-@synthesize rightUIButton;
-@synthesize abcTextField;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -41,6 +39,15 @@
 }
 */
 
+-(IBAction)textFieldDoneEditing:(id)sender {
+    [super resignFirstResponder];
+}
 
+
+-(IBAction)backgroundTap:(id)sender{
+    [self.nameField resignFirstResponder];
+    [self.numberField resignFirstResponder];
+}
 
 @end
+

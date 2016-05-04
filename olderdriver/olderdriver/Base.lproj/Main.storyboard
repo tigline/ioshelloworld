@@ -14,47 +14,66 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" userInteractionEnabled="NO" contentMode="scaleAspectFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleAspectFill" id="8bC-Xf-vdC" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="apress_logo" translatesAutoresizingMaskIntoConstraints="NO" id="kTN-b0-Sce">
-                                <rect key="frame" x="180" y="28" width="240" height="112"/>
+                            <imageView clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apress_logo" translatesAutoresizingMaskIntoConstraints="NO" id="kTN-b0-Sce">
+                                <rect key="frame" x="214" y="28" width="172" height="80"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type in a name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5SC-Ir-SOl">
-                                <rect key="frame" x="87" y="163" width="487" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type in a name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5SC-Ir-SOl">
+                                <rect key="frame" x="95" y="163" width="485" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                                <connections>
+                                    <action selector="textFieldDoneEditing:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="YqC-Wv-caj"/>
+                                </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggB-z5-8P4">
-                                <rect key="frame" x="12" y="167" width="50" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggB-z5-8P4">
+                                <rect key="frame" x="20" y="167" width="50" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Number:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gqh-8E-tU9">
-                                <rect key="frame" x="12" y="223" width="67" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gqh-8E-tU9">
+                                <rect key="frame" x="20" y="223" width="67" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type in a number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KDV-d1-1JB">
-                                <rect key="frame" x="87" y="219" width="487" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type in a number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KDV-d1-1JB">
+                                <rect key="frame" x="95" y="219" width="485" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="textFieldDoneEditing:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="7KR-9O-ayg"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="kTN-b0-Sce" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="4GH-fw-boN" userLabel="apress_logo.top = Top Layout Guide.bottom + 0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KDV-d1-1JB" secondAttribute="trailing" id="5R0-Hy-Ejc"/>
+                            <constraint firstItem="Gqh-8E-tU9" firstAttribute="centerY" secondItem="KDV-d1-1JB" secondAttribute="centerY" id="FnY-Se-YqP"/>
+                            <constraint firstItem="5SC-Ir-SOl" firstAttribute="top" secondItem="kTN-b0-Sce" secondAttribute="bottom" constant="55" id="JkH-d9-XwC"/>
+                            <constraint firstItem="5SC-Ir-SOl" firstAttribute="leading" secondItem="ggB-z5-8P4" secondAttribute="trailing" constant="25" id="Rg9-z0-SmR"/>
                             <constraint firstItem="ggB-z5-8P4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="RuO-qu-JJ6"/>
                             <constraint firstItem="Gqh-8E-tU9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="TEE-cy-Gag"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5SC-Ir-SOl" secondAttribute="trailing" id="TYg-Op-blW"/>
+                            <constraint firstItem="KDV-d1-1JB" firstAttribute="top" secondItem="5SC-Ir-SOl" secondAttribute="bottom" constant="26" id="UBG-qD-gen"/>
+                            <constraint firstItem="5SC-Ir-SOl" firstAttribute="leading" secondItem="KDV-d1-1JB" secondAttribute="leading" id="Wct-UJ-y3t"/>
                             <constraint firstItem="kTN-b0-Sce" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b7M-E3-0UW"/>
+                            <constraint firstItem="5SC-Ir-SOl" firstAttribute="centerY" secondItem="ggB-z5-8P4" secondAttribute="centerY" id="kqv-8h-k0c"/>
                         </constraints>
+                        <connections>
+                            <action selector="backgroundTap:" destination="BYZ-38-t0r" eventType="touchDown" id="p7a-wS-BLl"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="nameField" destination="5SC-Ir-SOl" id="cms-xs-dRb"/>
+                        <outlet property="numberField" destination="KDV-d1-1JB" id="T9a-K0-3RE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

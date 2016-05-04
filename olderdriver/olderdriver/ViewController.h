@@ -9,12 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UILabel *statusLabel;
-@property (weak, nonatomic) IBOutlet UIButton *leftUIButton;
-@property (weak, nonatomic) IBOutlet UIButton *rightUIButton;
-@property (weak, nonatomic) IBOutlet UITextField *abcTextField;
+@property (weak, nonatomic) IBOutlet UITextField *nameField;
+@property (weak, nonatomic) IBOutlet UITextField *numberField;
 
-//- (IBAction)click:(id)sender;
 
 @end
 
