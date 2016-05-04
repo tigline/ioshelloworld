@@ -14,7 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *rightUIButton;
 @property (weak, nonatomic) IBOutlet UITextField *abcTextField;
 
-- (IBAction)click:(id)sender;
+//- (IBAction)click:(id)sender;
 
 @end
 

@@ -34,12 +34,12 @@
 
 
 
-
+/*
 - (IBAction)click:(id)sender{
     statusLabel.text = [abcTextField text];
     
 }
-
+*/
 
 
 
