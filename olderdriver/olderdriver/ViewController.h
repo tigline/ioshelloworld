@@ -15,8 +15,11 @@
 @property (weak, nonatomic) IBOutlet UISwitch *rightSwitch;
 @property (weak, nonatomic) IBOutlet UILabel *sliderLabel;
 - (IBAction)switchChanged:(UISwitch *)sender;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *toggleControls;
+- (IBAction)toggleControls:(UISegmentedControl *)sender;
+
 - (IBAction)sliderChanged:(UISlider *)sender;
+@property (weak, nonatomic) IBOutlet UIButton *doSomeThingButton;
+- (IBAction)buttonPressed:(UIButton *)sender;
 
 
 

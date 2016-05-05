@@ -65,6 +65,9 @@
                                     <segment title="Switches"/>
                                     <segment title="Button"/>
                                 </segments>
+                                <connections>
+                                    <action selector="toggleControls:" destination="BYZ-38-t0r" eventType="valueChanged" id="7kV-1x-7di"/>
+                                </connections>
                             </segmentedControl>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xMI-5q-RFp">
                                 <rect key="frame" x="20" y="381" width="51" height="31"/>
@@ -78,9 +81,12 @@
                                     <action selector="switchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="TFB-07-wN6"/>
                                 </connections>
                             </switch>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaG-r6-KYa">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaG-r6-KYa">
                                 <rect key="frame" x="228" y="377" width="144" height="38"/>
                                 <state key="normal" title="Do Something" image="blueButton" backgroundImage="whiteButton"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RIu-lK-lPS"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="进度条" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="99n-hg-HSd">
                                 <rect key="frame" x="20" y="252" width="278" height="21"/>
@@ -117,15 +123,16 @@
                         </constraints>
                         <connections>
                             <action selector="backgroundTap:" destination="BYZ-38-t0r" eventType="touchDown" id="p7a-wS-BLl"/>
+                            <action selector="toggleControls:" destination="BYZ-38-t0r" eventType="valueChanged" id="RdT-hq-Rcr"/>
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="doSomeThingButton" destination="jaG-r6-KYa" id="MNZ-9E-9kC"/>
                         <outlet property="leftSwitch" destination="xMI-5q-RFp" id="4V5-ZH-xlR"/>
                         <outlet property="nameField" destination="5SC-Ir-SOl" id="cms-xs-dRb"/>
                         <outlet property="numberField" destination="KDV-d1-1JB" id="T9a-K0-3RE"/>
                         <outlet property="rightSwitch" destination="1EB-BM-9xC" id="IVE-RS-bRh"/>
                         <outlet property="sliderLabel" destination="99n-hg-HSd" id="MRO-pu-0E8"/>
-                        <outlet property="toggleControls" destination="Lne-3q-vUO" id="kKB-WM-zur"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
