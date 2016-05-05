@@ -11,7 +11,13 @@
 @interface ViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextField *numberField;
+@property (weak, nonatomic) IBOutlet UISwitch *leftSwitch;
+@property (weak, nonatomic) IBOutlet UISwitch *rightSwitch;
+@property (weak, nonatomic) IBOutlet UILabel *sliderLabel;
+- (IBAction)switchChanged:(UISwitch *)sender;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *toggleControls;
+- (IBAction)sliderChanged:(UISlider *)sender;
+
 
 
 @end
-

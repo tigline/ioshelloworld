@@ -20,7 +20,7 @@
                         <subviews>
                             <imageView clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="apress_logo" translatesAutoresizingMaskIntoConstraints="NO" id="kTN-b0-Sce">
                                 <rect key="frame" x="214" y="28" width="172" height="80"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type in a name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5SC-Ir-SOl">
                                 <rect key="frame" x="95" y="163" width="485" height="30"/>
@@ -33,13 +33,13 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggB-z5-8P4">
                                 <rect key="frame" x="20" y="167" width="50" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gqh-8E-tU9">
                                 <rect key="frame" x="20" y="223" width="67" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type in a number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KDV-d1-1JB">
@@ -50,20 +50,69 @@
                                     <action selector="textFieldDoneEditing:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="7KR-9O-ayg"/>
                                 </connections>
                             </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="1" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="6DI-2n-ilV">
+                                <rect key="frame" x="18" y="275" width="564" height="31"/>
+                                <connections>
+                                    <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="LeJ-bO-uwG"/>
+                                </connections>
+                            </slider>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Lne-3q-vUO">
+                                <rect key="frame" x="231" y="328" width="140" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="139" id="w6H-R9-2b8"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Switches"/>
+                                    <segment title="Button"/>
+                                </segments>
+                            </segmentedControl>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xMI-5q-RFp">
+                                <rect key="frame" x="20" y="381" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="K0P-Sd-dCL"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1EB-BM-9xC">
+                                <rect key="frame" x="531" y="381" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="TFB-07-wN6"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaG-r6-KYa">
+                                <rect key="frame" x="228" y="377" width="144" height="38"/>
+                                <state key="normal" title="Do Something" image="blueButton" backgroundImage="whiteButton"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="进度条" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="99n-hg-HSd">
+                                <rect key="frame" x="20" y="252" width="278" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="1EB-BM-9xC" firstAttribute="top" secondItem="6DI-2n-ilV" secondAttribute="bottom" constant="76" id="1qT-G8-vwi"/>
                             <constraint firstItem="kTN-b0-Sce" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="4GH-fw-boN" userLabel="apress_logo.top = Top Layout Guide.bottom + 0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KDV-d1-1JB" secondAttribute="trailing" id="5R0-Hy-Ejc"/>
+                            <constraint firstItem="1EB-BM-9xC" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="6zk-vm-Q60"/>
+                            <constraint firstItem="6DI-2n-ilV" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="EsR-8l-ecg"/>
+                            <constraint firstItem="xMI-5q-RFp" firstAttribute="top" secondItem="6DI-2n-ilV" secondAttribute="bottom" constant="76" id="F0Z-J7-FbX"/>
                             <constraint firstItem="Gqh-8E-tU9" firstAttribute="centerY" secondItem="KDV-d1-1JB" secondAttribute="centerY" id="FnY-Se-YqP"/>
                             <constraint firstItem="5SC-Ir-SOl" firstAttribute="top" secondItem="kTN-b0-Sce" secondAttribute="bottom" constant="55" id="JkH-d9-XwC"/>
                             <constraint firstItem="5SC-Ir-SOl" firstAttribute="leading" secondItem="ggB-z5-8P4" secondAttribute="trailing" constant="25" id="Rg9-z0-SmR"/>
                             <constraint firstItem="ggB-z5-8P4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="RuO-qu-JJ6"/>
                             <constraint firstItem="Gqh-8E-tU9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="TEE-cy-Gag"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5SC-Ir-SOl" secondAttribute="trailing" id="TYg-Op-blW"/>
+                            <constraint firstItem="xMI-5q-RFp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Tj6-Je-Zgv"/>
                             <constraint firstItem="KDV-d1-1JB" firstAttribute="top" secondItem="5SC-Ir-SOl" secondAttribute="bottom" constant="26" id="UBG-qD-gen"/>
                             <constraint firstItem="5SC-Ir-SOl" firstAttribute="leading" secondItem="KDV-d1-1JB" secondAttribute="leading" id="Wct-UJ-y3t"/>
+                            <constraint firstItem="6DI-2n-ilV" firstAttribute="top" secondItem="KDV-d1-1JB" secondAttribute="bottom" constant="26" id="ahe-SP-lzq"/>
                             <constraint firstItem="kTN-b0-Sce" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b7M-E3-0UW"/>
+                            <constraint firstItem="6DI-2n-ilV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="c4n-IG-NQW"/>
+                            <constraint firstItem="xMI-5q-RFp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="361" id="cJE-jv-Zau"/>
+                            <constraint firstItem="Lne-3q-vUO" firstAttribute="top" secondItem="6DI-2n-ilV" secondAttribute="bottom" constant="23" id="cNL-Z6-urN"/>
+                            <constraint firstItem="Lne-3q-vUO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eaK-gN-Txq"/>
+                            <constraint firstItem="jaG-r6-KYa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iec-Oa-pZc"/>
                             <constraint firstItem="5SC-Ir-SOl" firstAttribute="centerY" secondItem="ggB-z5-8P4" secondAttribute="centerY" id="kqv-8h-k0c"/>
                         </constraints>
                         <connections>
@@ -71,8 +120,12 @@
                         </connections>
                     </view>
                     <connections>
+                        <outlet property="leftSwitch" destination="xMI-5q-RFp" id="4V5-ZH-xlR"/>
                         <outlet property="nameField" destination="5SC-Ir-SOl" id="cms-xs-dRb"/>
                         <outlet property="numberField" destination="KDV-d1-1JB" id="T9a-K0-3RE"/>
+                        <outlet property="rightSwitch" destination="1EB-BM-9xC" id="IVE-RS-bRh"/>
+                        <outlet property="sliderLabel" destination="99n-hg-HSd" id="MRO-pu-0E8"/>
+                        <outlet property="toggleControls" destination="Lne-3q-vUO" id="kKB-WM-zur"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -82,5 +135,7 @@
     </scenes>
     <resources>
         <image name="apress_logo" width="172" height="80"/>
+        <image name="blueButton" width="29" height="37"/>
+        <image name="whiteButton" width="29" height="38"/>
     </resources>
 </document>

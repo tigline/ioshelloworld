@@ -15,13 +15,15 @@
 @implementation ViewController
 @synthesize nameField;
 @synthesize numberField;
-
+@synthesize rightSwitch;
+@synthesize leftSwitch;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // statusLabel.textAlignment = UITextAlignmentCenter;
     // Do any additional setup after loading the view, typically from a nib.
     NSLog(@"viewDidLoad");
+    self.sliderLabel.text = @"50";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,5 +51,20 @@
     [self.numberField resignFirstResponder];
 }
 
+
+- (IBAction)switchChanged:(UISwitch *)sender {
+    NSLog(@"switchChanged");
+    BOOL setting = sender.isOn;
+    [self.leftSwitch setOn:setting animated:YES];
+    [self.rightSwitch setOn:setting animated:YES];
+    
+}
+- (IBAction)sliderChanged:(UISlider *)sender {
+    int process = (int) lround(sender.value);
+    // double process = sender.value;
+    self.sliderLabel.text = [NSString stringWithFormat:@"%d", process];
+    
+    
+}
 @end
 
