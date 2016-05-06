@@ -56,8 +56,8 @@
                                     <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="LeJ-bO-uwG"/>
                                 </connections>
                             </slider>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Lne-3q-vUO">
-                                <rect key="frame" x="231" y="328" width="140" height="29"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Lne-3q-vUO">
+                                <rect key="frame" x="230" y="328" width="139" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="139" id="w6H-R9-2b8"/>
                                 </constraints>
@@ -81,7 +81,7 @@
                                     <action selector="switchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="TFB-07-wN6"/>
                                 </connections>
                             </switch>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaG-r6-KYa">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaG-r6-KYa">
                                 <rect key="frame" x="228" y="377" width="144" height="38"/>
                                 <state key="normal" title="Do Something" image="blueButton" backgroundImage="whiteButton"/>
                                 <connections>
@@ -95,10 +95,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="1EB-BM-9xC" firstAttribute="top" secondItem="6DI-2n-ilV" secondAttribute="bottom" constant="76" id="1qT-G8-vwi"/>
                             <constraint firstItem="kTN-b0-Sce" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="4GH-fw-boN" userLabel="apress_logo.top = Top Layout Guide.bottom + 0"/>
+                            <constraint firstItem="jaG-r6-KYa" firstAttribute="top" secondItem="Lne-3q-vUO" secondAttribute="bottom" constant="21" id="4Ua-wW-u3n"/>
                             <constraint firstAttribute="trailingMargin" secondItem="KDV-d1-1JB" secondAttribute="trailing" id="5R0-Hy-Ejc"/>
                             <constraint firstItem="1EB-BM-9xC" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="6zk-vm-Q60"/>
                             <constraint firstItem="6DI-2n-ilV" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="EsR-8l-ecg"/>
@@ -132,6 +133,7 @@
                         <outlet property="nameField" destination="5SC-Ir-SOl" id="cms-xs-dRb"/>
                         <outlet property="numberField" destination="KDV-d1-1JB" id="T9a-K0-3RE"/>
                         <outlet property="rightSwitch" destination="1EB-BM-9xC" id="IVE-RS-bRh"/>
+                        <outlet property="segmentedControl" destination="Lne-3q-vUO" id="JHB-Xf-1Xy"/>
                         <outlet property="sliderLabel" destination="99n-hg-HSd" id="MRO-pu-0E8"/>
                     </connections>
                 </viewController>

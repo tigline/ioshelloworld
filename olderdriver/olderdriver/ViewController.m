@@ -17,6 +17,7 @@
 @synthesize numberField;
 @synthesize rightSwitch;
 @synthesize leftSwitch;
+@synthesize segmentedControl;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -24,6 +25,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     NSLog(@"viewDidLoad");
     self.sliderLabel.text = @"50";
+    // [self.segmentedControl insertSegmentWithTitle:@"第三个" atIndex:2 animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -76,6 +78,34 @@
     
 }
 - (IBAction)buttonPressed:(UIButton *)sender {
+    NSLog(@"buttonPressed");
+    // 创建一个从下往上浮动的提示框
+    UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"Are You Sure?" message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    // 提示框的第一个action以及action的事件
+    UIAlertAction *yesAction = [UIAlertAction actionWithTitle:@"Yes, I'm sure!" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action){
+        NSString *msg;
+        if ([self.nameField.text length] > 0) {
+            msg = [NSString stringWithFormat:@"You can breathe easy, %@, everything went OK.", self.nameField.text];
+        } else {
+            msg = @"You can breathe easy, evetything went OK.";
+        }
+        UIAlertController *controller2 = [UIAlertController alertControllerWithTitle:@"Something Was Done" message:msg preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"Phew!" style:UIAlertActionStyleCancel handler:nil];
+        [controller2 addAction:cancelAction];
+        [self presentViewController:controller2 animated:YES completion:nil];
+    }];
+    // 提示框的第二个action以及action的事件
+    UIAlertAction *noAction = [UIAlertAction actionWithTitle:@"No way!" style:UIAlertActionStyleCancel handler:nil];
+    [controller addAction:yesAction];
+    [controller addAction:noAction];
+    
+    UIPopoverPresentationController *ppc = controller.popoverPresentationController;
+    if (ppc != nil) {
+        ppc.sourceView = sender;
+        ppc.sourceRect = sender.bounds;
+    }
+    // [self presentViewController:controller animated:YES completion:nil];
+    [self presentViewController:controller animated:YES completion:nil];
 }
 @end
 
