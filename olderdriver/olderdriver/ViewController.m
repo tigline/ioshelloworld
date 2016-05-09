@@ -96,13 +96,18 @@
     }];
     // 提示框的第二个action以及action的事件
     UIAlertAction *noAction = [UIAlertAction actionWithTitle:@"No way!" style:UIAlertActionStyleCancel handler:nil];
+    // 'UIAlertController can only have one action with a style of UIAlertActionStyleCancel'
+    // UIAlertAction *threeAction = [UIAlertAction actionWithTitle:@"No way!" style:UIAlertActionStyleCancel handler:nil];
     [controller addAction:yesAction];
     [controller addAction:noAction];
+    // [controller addAction:threeAction];
     
     UIPopoverPresentationController *ppc = controller.popoverPresentationController;
     if (ppc != nil) {
+        // IPAD 等大屏设备弹出提示框
         ppc.sourceView = sender;
         ppc.sourceRect = sender.bounds;
+        ppc.permittedArrowDirections = UIPopoverArrowDirectionUnknown;
     }
     // [self presentViewController:controller animated:YES completion:nil];
     [self presentViewController:controller animated:YES completion:nil];
