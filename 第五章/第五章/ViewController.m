@@ -27,7 +27,7 @@
 // 控制设备允许的旋转方向
 - (NSUInteger)supportedInterfaceOrientations {
     //return (UIInterfaceOrientationMaskPortrait | UIInterfaceOrientationLandscapeLeft);
-    return UIInterfaceOrientationMaskAll;
+    return UIInterfaceOrientationMaskAllButUpsideDown;
 }
 
 @end
