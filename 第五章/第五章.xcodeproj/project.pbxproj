@@ -501,6 +501,7 @@
 				56436F581CE068E800382244 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		56436F591CE068E800382244 /* Build configuration list for PBXNativeTarget "第五章Tests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +510,7 @@
 				56436F5B1CE068E800382244 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		56436F5C1CE068E800382244 /* Build configuration list for PBXNativeTarget "第五章UITests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +519,7 @@
 				56436F5E1CE068E800382244 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 
+- (NSUInteger)supportedInterfaceOrientations;
 
 @end
 
