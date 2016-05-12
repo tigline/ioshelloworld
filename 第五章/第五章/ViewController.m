@@ -13,10 +13,13 @@
 @end
 
 @implementation ViewController
+@synthesize abcView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    // float a = self.view.frame.size.height * 0.75;
+    
 }
 
 - (void)didReceiveMemoryWarning {
