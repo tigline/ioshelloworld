@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		5675D40B1CE45B0800BD0582 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5675D40A1CE45B0800BD0582 /* main.m */; };
 		5675D40E1CE45B0800BD0582 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5675D40D1CE45B0800BD0582 /* AppDelegate.m */; };
-		5675D4111CE45B0800BD0582 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5675D4101CE45B0800BD0582 /* ViewController.m */; };
+		5675D4111CE45B0800BD0582 /* SwitchingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5675D4101CE45B0800BD0582 /* SwitchingViewController.m */; };
 		5675D4141CE45B0800BD0582 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5675D4121CE45B0800BD0582 /* Main.storyboard */; };
 		5675D4161CE45B0800BD0582 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5675D4151CE45B0800BD0582 /* Assets.xcassets */; };
 		5675D4191CE45B0800BD0582 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5675D4171CE45B0800BD0582 /* LaunchScreen.storyboard */; };
 		5675D4241CE45B0800BD0582 /* ___Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5675D4231CE45B0800BD0582 /* ___Tests.m */; };
 		5675D42F1CE45B0800BD0582 /* ___UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5675D42E1CE45B0800BD0582 /* ___UITests.m */; };
+		5675D43E1CE469F500BD0582 /* BlueViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5675D43D1CE469F500BD0582 /* BlueViewController.m */; };
+		5675D4411CE46A0600BD0582 /* YellowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5675D4401CE46A0600BD0582 /* YellowViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +41,8 @@
 		5675D40A1CE45B0800BD0582 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5675D40C1CE45B0800BD0582 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5675D40D1CE45B0800BD0582 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5675D40F1CE45B0800BD0582 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5675D4101CE45B0800BD0582 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5675D40F1CE45B0800BD0582 /* SwitchingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwitchingViewController.h; sourceTree = "<group>"; };
+		5675D4101CE45B0800BD0582 /* SwitchingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwitchingViewController.m; sourceTree = "<group>"; };
 		5675D4131CE45B0800BD0582 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5675D4151CE45B0800BD0582 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5675D4181CE45B0800BD0582 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +53,10 @@
 		5675D42A1CE45B0800BD0582 /* 第六章UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "第六章UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5675D42E1CE45B0800BD0582 /* ___UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "___UITests.m"; sourceTree = "<group>"; };
 		5675D4301CE45B0800BD0582 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5675D43C1CE469F500BD0582 /* BlueViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueViewController.h; sourceTree = "<group>"; };
+		5675D43D1CE469F500BD0582 /* BlueViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueViewController.m; sourceTree = "<group>"; };
+		5675D43F1CE46A0600BD0582 /* YellowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YellowViewController.h; sourceTree = "<group>"; };
+		5675D4401CE46A0600BD0582 /* YellowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YellowViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,13 +109,17 @@
 			children = (
 				5675D40C1CE45B0800BD0582 /* AppDelegate.h */,
 				5675D40D1CE45B0800BD0582 /* AppDelegate.m */,
-				5675D40F1CE45B0800BD0582 /* ViewController.h */,
-				5675D4101CE45B0800BD0582 /* ViewController.m */,
-				5675D4121CE45B0800BD0582 /* Main.storyboard */,
 				5675D4151CE45B0800BD0582 /* Assets.xcassets */,
-				5675D4171CE45B0800BD0582 /* LaunchScreen.storyboard */,
+				5675D43C1CE469F500BD0582 /* BlueViewController.h */,
+				5675D43D1CE469F500BD0582 /* BlueViewController.m */,
 				5675D41A1CE45B0800BD0582 /* Info.plist */,
+				5675D4171CE45B0800BD0582 /* LaunchScreen.storyboard */,
+				5675D4121CE45B0800BD0582 /* Main.storyboard */,
 				5675D4091CE45B0800BD0582 /* Supporting Files */,
+				5675D40F1CE45B0800BD0582 /* SwitchingViewController.h */,
+				5675D4101CE45B0800BD0582 /* SwitchingViewController.m */,
+				5675D43F1CE46A0600BD0582 /* YellowViewController.h */,
+				5675D4401CE46A0600BD0582 /* YellowViewController.m */,
 			);
 			path = "第六章";
 			sourceTree = "<group>";
@@ -273,8 +283,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5675D4111CE45B0800BD0582 /* ViewController.m in Sources */,
+				5675D4111CE45B0800BD0582 /* SwitchingViewController.m in Sources */,
+				5675D4411CE46A0600BD0582 /* YellowViewController.m in Sources */,
 				5675D40E1CE45B0800BD0582 /* AppDelegate.m in Sources */,
+				5675D43E1CE469F500BD0582 /* BlueViewController.m in Sources */,
 				5675D40B1CE45B0800BD0582 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -501,6 +513,7 @@
 				5675D4351CE45B0800BD0582 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5675D4361CE45B0800BD0582 /* Build configuration list for PBXNativeTarget "第六章Tests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +522,7 @@
 				5675D4381CE45B0800BD0582 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5675D4391CE45B0800BD0582 /* Build configuration list for PBXNativeTarget "第六章UITests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +531,7 @@
 				5675D43B1CE45B0800BD0582 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
