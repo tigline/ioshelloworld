@@ -12,8 +12,6 @@
 
 @interface SwitchingViewController : UIViewController
 
-@property (strong, nonatomic) YellowViewController *yellowViewController;
-@property (strong, nonatomic) BlueViewController *blueViewController;
 
 
 -(IBAction)switchViews:(id)sender;
