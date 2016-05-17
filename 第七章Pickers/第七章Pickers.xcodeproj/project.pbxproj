@@ -93,6 +93,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		567C26581CEABF04009179E1 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		569FB6561CE9F6450082B68F = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +123,7 @@
 		569FB6611CE9F6450082B68F /* 第七章Pickers */ = {
 			isa = PBXGroup;
 			children = (
+				567C26581CEABF04009179E1 /* Images */,
 				569FB6651CE9F6450082B68F /* AppDelegate.h */,
 				569FB6661CE9F6450082B68F /* AppDelegate.m */,
 				569FB66E1CE9F6450082B68F /* Assets.xcassets */,
@@ -532,6 +540,7 @@
 				569FB68E1CE9F6450082B68F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		569FB68F1CE9F6450082B68F /* Build configuration list for PBXNativeTarget "第七章PickersTests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +549,7 @@
 				569FB6911CE9F6450082B68F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		569FB6921CE9F6450082B68F /* Build configuration list for PBXNativeTarget "第七章PickersUITests" */ = {
 			isa = XCConfigurationList;
@@ -548,6 +558,7 @@
 				569FB6941CE9F6450082B68F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
