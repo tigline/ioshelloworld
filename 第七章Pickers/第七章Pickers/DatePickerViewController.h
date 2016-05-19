@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface DatePickerViewController : UIViewController
-
+- (IBAction)buttonPressed:(id)sender;
 @end

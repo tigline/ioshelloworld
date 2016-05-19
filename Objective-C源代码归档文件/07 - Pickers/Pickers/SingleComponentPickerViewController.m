@@ -47,11 +47,13 @@
 #pragma mark -
 #pragma mark Picker Data Source Methods
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
+    NSLog(@"11111111111111");
     return 1;
 }
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView
 numberOfRowsInComponent:(NSInteger)component {
+    NSLog(@"22222222222222");
     return [self.characterNames count];
 }
 
@@ -59,6 +61,7 @@ numberOfRowsInComponent:(NSInteger)component {
 - (NSString *)pickerView:(UIPickerView *)pickerView
              titleForRow:(NSInteger)row
             forComponent:(NSInteger)component {
+    NSLog(@"33333333333333");
     return self.characterNames[row];
 }
 
