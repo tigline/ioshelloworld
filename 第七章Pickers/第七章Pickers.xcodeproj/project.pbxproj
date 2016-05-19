@@ -12,7 +12,6 @@
 		569FB66A1CE9F6450082B68F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 569FB6691CE9F6450082B68F /* ViewController.m */; };
 		569FB66D1CE9F6450082B68F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 569FB66B1CE9F6450082B68F /* Main.storyboard */; };
 		569FB66F1CE9F6450082B68F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 569FB66E1CE9F6450082B68F /* Assets.xcassets */; };
-		569FB6721CE9F6450082B68F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 569FB6701CE9F6450082B68F /* LaunchScreen.storyboard */; };
 		569FB67D1CE9F6450082B68F /* ___PickersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 569FB67C1CE9F6450082B68F /* ___PickersTests.m */; };
 		569FB6881CE9F6450082B68F /* ___PickersUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 569FB6871CE9F6450082B68F /* ___PickersUITests.m */; };
 		569FB6971CE9F6C70082B68F /* DatePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 569FB6961CE9F6C70082B68F /* DatePickerViewController.m */; };
@@ -48,7 +47,6 @@
 		569FB6691CE9F6450082B68F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		569FB66C1CE9F6450082B68F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		569FB66E1CE9F6450082B68F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		569FB6711CE9F6450082B68F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		569FB6731CE9F6450082B68F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		569FB6781CE9F6450082B68F /* 第七章PickersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "第七章PickersTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		569FB67C1CE9F6450082B68F /* ___PickersTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "___PickersTests.m"; sourceTree = "<group>"; };
@@ -136,7 +134,6 @@
 				569FB69B1CE9F7800082B68F /* DoubleComponentPickerViewController.h */,
 				569FB69C1CE9F7800082B68F /* DoubleComponentPickerViewController.m */,
 				569FB6731CE9F6450082B68F /* Info.plist */,
-				569FB6701CE9F6450082B68F /* LaunchScreen.storyboard */,
 				569FB66B1CE9F6450082B68F /* Main.storyboard */,
 				569FB6981CE9F7710082B68F /* SingleComponentPickerViewController.h */,
 				569FB6991CE9F7710082B68F /* SingleComponentPickerViewController.m */,
@@ -278,7 +275,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				569FB6721CE9F6450082B68F /* LaunchScreen.storyboard in Resources */,
 				569FB66F1CE9F6450082B68F /* Assets.xcassets in Resources */,
 				569FB66D1CE9F6450082B68F /* Main.storyboard in Resources */,
 			);
@@ -354,14 +350,6 @@
 				569FB66C1CE9F6450082B68F /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		569FB6701CE9F6450082B68F /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				569FB6711CE9F6450082B68F /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
