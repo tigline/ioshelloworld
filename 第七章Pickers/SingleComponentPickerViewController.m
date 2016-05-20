@@ -58,17 +58,40 @@
 
 #pragma mark -
 #pragma mark Picker Data Source Methods
+/**
+ *  滚轮个数
+ *
+ *  @param pickerView pickerView实例
+ *
+ *  @return 滚轮个数
+ */
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
-    return 1;
+    return 2;
 }
-
+/**
+ *  单个滚轮内容数量
+ *
+ *  @param pickerView pickerView实例
+ *  @param component 从左往右第几个滚轮，从0开始
+ *
+ *  @return 单个滚轮内容数量
+ */
 -(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
     return [self.characterNames count];
 }
 
 #pragma mark Picker Delegate Methods
+/**
+ *  获取pickerView的内容
+ *
+ *  @param pickerView pickerView实例
+ *  @param row        哪一行数据
+ *  @param component  从左往右第几个滚轮，从0开始
+ *
+ *  @return <#return value description#>
+ */
 -(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
-    return self.characterNames[row];
+    return [NSString stringWithFormat:@"%@%ld", self.characterNames[row], (long)component];
 }
 
 
