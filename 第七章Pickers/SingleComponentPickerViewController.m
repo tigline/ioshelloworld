@@ -66,7 +66,8 @@
  *  @return 滚轮个数
  */
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
-    return 2;
+    // return 2;
+    return 1;
 }
 /**
  *  单个滚轮内容数量
