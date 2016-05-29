@@ -125,7 +125,7 @@
         <!--Custom-->
         <scene sceneID="DVk-yV-LDQ">
             <objects>
-                <viewController id="aWe-AN-F6c" sceneMemberID="viewController">
+                <viewController id="aWe-AN-F6c" customClass="CustomPickerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ZSb-zZ-ofY"/>
                         <viewControllerLayoutGuide type="bottom" id="y8I-PW-pfF"/>
@@ -133,9 +133,51 @@
                     <view key="view" contentMode="scaleToFill" id="udh-eL-2BQ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXM-Fk-Yuo">
+                                <rect key="frame" x="244" y="236" width="113" height="58"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="48"/>
+                                <color key="textColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8h-ry-60Q">
+                                <rect key="frame" x="285" y="302" width="31" height="30"/>
+                                <state key="normal" title="Spin"/>
+                                <connections>
+                                    <action selector="spin:" destination="aWe-AN-F6c" eventType="touchUpInside" id="1H7-py-mZh"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hyj-Sf-4PV">
+                                <rect key="frame" x="20" y="20" width="560" height="216"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                                <connections>
+                                    <outlet property="dataSource" destination="aWe-AN-F6c" id="iHf-PJ-xdq"/>
+                                    <outlet property="delegate" destination="aWe-AN-F6c" id="JLC-LV-Emb"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="s8h-ry-60Q" firstAttribute="centerX" secondItem="udh-eL-2BQ" secondAttribute="centerX" id="32B-7I-ViZ"/>
+                            <constraint firstItem="s8h-ry-60Q" firstAttribute="centerX" secondItem="udh-eL-2BQ" secondAttribute="centerX" id="4tu-k3-otz"/>
+                            <constraint firstItem="cXM-Fk-Yuo" firstAttribute="centerX" secondItem="udh-eL-2BQ" secondAttribute="centerX" id="CYN-fk-5gC"/>
+                            <constraint firstItem="cXM-Fk-Yuo" firstAttribute="centerX" secondItem="udh-eL-2BQ" secondAttribute="centerX" id="QdZ-7Z-nhU"/>
+                            <constraint firstItem="Hyj-Sf-4PV" firstAttribute="centerX" secondItem="udh-eL-2BQ" secondAttribute="centerX" id="UyI-r9-1aB"/>
+                            <constraint firstItem="Hyj-Sf-4PV" firstAttribute="leading" secondItem="udh-eL-2BQ" secondAttribute="leadingMargin" id="l2l-y0-Xuk"/>
+                            <constraint firstItem="Hyj-Sf-4PV" firstAttribute="top" secondItem="ZSb-zZ-ofY" secondAttribute="bottom" id="o2q-iC-hYd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Hyj-Sf-4PV" secondAttribute="trailing" id="p4k-8l-J8k"/>
+                            <constraint firstItem="cXM-Fk-Yuo" firstAttribute="top" secondItem="Hyj-Sf-4PV" secondAttribute="bottom" id="tYK-3R-vYc"/>
+                            <constraint firstItem="s8h-ry-60Q" firstAttribute="top" secondItem="cXM-Fk-Yuo" secondAttribute="bottom" constant="8" id="xvr-e1-UZh"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Custom" image="toolicon" id="wVK-dO-FD1"/>
+                    <connections>
+                        <outlet property="button" destination="s8h-ry-60Q" id="YS2-fH-Dfc"/>
+                        <outlet property="picker" destination="Hyj-Sf-4PV" id="PH4-py-FK1"/>
+                        <outlet property="winLabel" destination="cXM-Fk-Yuo" id="Lv1-Od-tgt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ggG-Yf-fEr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

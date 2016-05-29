@@ -20,6 +20,8 @@
 		569FB69D1CE9F7800082B68F /* DoubleComponentPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 569FB69C1CE9F7800082B68F /* DoubleComponentPickerViewController.m */; };
 		569FB6A01CE9F7EB0082B68F /* DependentComponentPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 569FB69F1CE9F7EB0082B68F /* DependentComponentPickerViewController.m */; };
 		569FB6A31CE9F7FB0082B68F /* CustomPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 569FB6A21CE9F7FB0082B68F /* CustomPickerViewController.m */; };
+		56FCB6C31CFB3E7600A58CCA /* crunch.wav in Resources */ = {isa = PBXBuildFile; fileRef = 56FCB6C11CFB3E7600A58CCA /* crunch.wav */; };
+		56FCB6C41CFB3E7600A58CCA /* win.wav in Resources */ = {isa = PBXBuildFile; fileRef = 56FCB6C21CFB3E7600A58CCA /* win.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 		569FB69F1CE9F7EB0082B68F /* DependentComponentPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DependentComponentPickerViewController.m; sourceTree = "<group>"; };
 		569FB6A11CE9F7FB0082B68F /* CustomPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPickerViewController.h; sourceTree = "<group>"; };
 		569FB6A21CE9F7FB0082B68F /* CustomPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPickerViewController.m; sourceTree = "<group>"; };
+		56FCB6C11CFB3E7600A58CCA /* crunch.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = crunch.wav; path = "../../Objective-C源代码归档文件/07 - Picker Sounds/crunch.wav"; sourceTree = "<group>"; };
+		56FCB6C21CFB3E7600A58CCA /* win.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = win.wav; path = "../../Objective-C源代码归档文件/07 - Picker Sounds/win.wav"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,8 @@
 		569FB6611CE9F6450082B68F /* 第七章Pickers */ = {
 			isa = PBXGroup;
 			children = (
+				56FCB6C11CFB3E7600A58CCA /* crunch.wav */,
+				56FCB6C21CFB3E7600A58CCA /* win.wav */,
 				569FB6651CE9F6450082B68F /* AppDelegate.h */,
 				569FB6661CE9F6450082B68F /* AppDelegate.m */,
 				569FB66E1CE9F6450082B68F /* Assets.xcassets */,
@@ -271,7 +277,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				560153D81CF9E87900FC0FA8 /* statedictionary.plist in Resources */,
+				56FCB6C31CFB3E7600A58CCA /* crunch.wav in Resources */,
 				569FB66F1CE9F6450082B68F /* Assets.xcassets in Resources */,
+				56FCB6C41CFB3E7600A58CCA /* win.wav in Resources */,
 				569FB66D1CE9F6450082B68F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
