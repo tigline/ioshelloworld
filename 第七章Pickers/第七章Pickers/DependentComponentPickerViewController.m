@@ -102,7 +102,7 @@
     }
 }
 
-// 滚轮内容的宽度
+// 滚轮内容的宽度，默认平均分配每个列滚轮的宽度
 - (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component{
     // 整个滚轮控件的宽度
     CGFloat pickerWidth = pickerView.bounds.size.width;
