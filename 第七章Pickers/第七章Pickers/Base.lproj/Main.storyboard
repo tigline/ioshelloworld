@@ -144,7 +144,7 @@
         <!--Dependent-->
         <scene sceneID="fS0-Us-LCR">
             <objects>
-                <viewController id="ZsE-ep-DbM" sceneMemberID="viewController">
+                <viewController id="ZsE-ep-DbM" customClass="DependentComponentPickerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Yyx-Vq-fIu"/>
                         <viewControllerLayoutGuide type="bottom" id="WT5-p7-MCy"/>
@@ -152,9 +152,34 @@
                     <view key="view" contentMode="scaleToFill" id="zNB-dr-jc9">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iW8-vt-lkf">
+                                <rect key="frame" x="278" y="224" width="44" height="30"/>
+                                <state key="normal" title="Select"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="ZsE-ep-DbM" eventType="touchUpInside" id="OFy-RK-3o0"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HPC-bG-8lT">
+                                <rect key="frame" x="140" y="0.0" width="320" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZsE-ep-DbM" id="Ppf-B0-aa1"/>
+                                    <outlet property="delegate" destination="ZsE-ep-DbM" id="RoK-HN-ciL"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iW8-vt-lkf" firstAttribute="centerX" secondItem="zNB-dr-jc9" secondAttribute="centerX" id="5l8-nX-qyi"/>
+                            <constraint firstItem="HPC-bG-8lT" firstAttribute="centerX" secondItem="zNB-dr-jc9" secondAttribute="centerX" id="gIB-6V-dhh"/>
+                            <constraint firstItem="iW8-vt-lkf" firstAttribute="top" secondItem="HPC-bG-8lT" secondAttribute="bottom" constant="8" id="oTb-XU-iMs"/>
+                            <constraint firstItem="HPC-bG-8lT" firstAttribute="top" secondItem="zNB-dr-jc9" secondAttribute="topMargin" id="rGU-Ea-ccs"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Dependent" image="dependenticon" id="TWG-wl-uGd"/>
+                    <connections>
+                        <outlet property="dependentPicker" destination="HPC-bG-8lT" id="r7d-IF-R4j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b2R-do-RiC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

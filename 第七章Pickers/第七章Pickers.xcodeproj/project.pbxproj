@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		560153D81CF9E87900FC0FA8 /* statedictionary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 560153D71CF9E87900FC0FA8 /* statedictionary.plist */; };
 		569FB6641CE9F6450082B68F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 569FB6631CE9F6450082B68F /* main.m */; };
 		569FB6671CE9F6450082B68F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 569FB6661CE9F6450082B68F /* AppDelegate.m */; };
 		569FB66A1CE9F6450082B68F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 569FB6691CE9F6450082B68F /* ViewController.m */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		560153D71CF9E87900FC0FA8 /* statedictionary.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = statedictionary.plist; path = "../../Objective-C源代码归档文件/07 - Pickers/Pickers/statedictionary.plist"; sourceTree = "<group>"; };
 		569FB65F1CE9F6450082B68F /* 第七章Pickers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "第七章Pickers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		569FB6631CE9F6450082B68F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		569FB6651CE9F6450082B68F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				569FB66B1CE9F6450082B68F /* Main.storyboard */,
 				569FB6981CE9F7710082B68F /* SingleComponentPickerViewController.h */,
 				569FB6991CE9F7710082B68F /* SingleComponentPickerViewController.m */,
+				560153D71CF9E87900FC0FA8 /* statedictionary.plist */,
 				569FB6621CE9F6450082B68F /* Supporting Files */,
 				569FB6681CE9F6450082B68F /* ViewController.h */,
 				569FB6691CE9F6450082B68F /* ViewController.m */,
@@ -267,6 +270,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				560153D81CF9E87900FC0FA8 /* statedictionary.plist in Resources */,
 				569FB66F1CE9F6450082B68F /* Assets.xcassets in Resources */,
 				569FB66D1CE9F6450082B68F /* Main.storyboard in Resources */,
 			);

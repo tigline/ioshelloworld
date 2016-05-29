@@ -8,10 +8,12 @@
 
 #import "DoubleComponentPickerViewController.h"
 
+// 宏定义
 #define kFilingComponent 0
 #define kBreadCompenent  1
 
 @interface DoubleComponentPickerViewController ()
+// 输入输出口
 @property (weak, nonatomic) IBOutlet UIPickerView *doublePicker;
 @property(strong, nonatomic) NSArray *fillingTypes;
 @property(strong, nonatomic) NSArray *breadTypes;
@@ -23,6 +25,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // 初始化两个滚轴数据内容数组
     self.fillingTypes = @[@"Ham", @"Turkey", @"Peanut Butter", @"Tuna Salad", @"Chicken Salad", @"Roast Beff", @"Vegemite"];
     self.breadTypes = @[@"White", @"Whole Wheat", @"Rye", @"Sourdough", @"Seven Grain"];
     
@@ -63,10 +66,11 @@
 
 #pragma mark -
 #pragma mark Picker Delegate Methods
+// 滚轴个数
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
     return 2;
 }
-
+// 单个滚轴内容个数
 -(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
     if (component == kBreadCompenent) {
         return [self.breadTypes count];
@@ -74,7 +78,7 @@
         return [self.fillingTypes count];
     }
 }
-
+// 单个滚轴的单个数据内容
 -(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
     if (component == kBreadCompenent) {
         return self.breadTypes[row];
