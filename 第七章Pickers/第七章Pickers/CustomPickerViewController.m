@@ -59,29 +59,19 @@
             win = YES;
         }
     }
-    
-    /*
-    if (win) {
-        self.winLabel.text = @"WINNER!";
-    } else {
-        self.winLabel.text = @" ";
-    }
-     */
     if (_crunchSoundID == 0) {
         NSString *path = [[NSBundle mainBundle] pathForResource:@"crunch" ofType:@"wav"];
         NSURL *soundURL = [NSURL fileURLWithPath:path];
-        AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &_winSoundID);
+        AudioServicesCreateSystemSoundID((__bridge CFURLRef)soundURL, &_crunchSoundID);
     }
     AudioServicesPlaySystemSound(_crunchSoundID);
     if (win) {
-        [self performSelector:@selector(playWinSound) withObject:nil afterDelay:.5];
+        [self performSelector:@selector(playWinSound) withObject:nil afterDelay:0.5];
     } else {
-        [self performSelector:@selector(showButton) withObject:nil afterDelay:.5];
+        [self performSelector:@selector(showButton) withObject:nil afterDelay:0.5];
     }
     self.button.hidden = YES;
     self.winLabel.text = @" ";
-    
-    
 }
 
 - (void)showButton {

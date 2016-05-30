@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#x7b2c;&#x4e03;&#x7ae0;Pickers/CustomPickerViewController.m"
-            timestampString = "486227291.487679"
+            timestampString = "486267189.151749"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
             landmarkName = "-spin:"
             landmarkType = "5">
          </BreakpointContent>
