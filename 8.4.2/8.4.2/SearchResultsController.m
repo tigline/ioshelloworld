@@ -53,12 +53,12 @@ static const NSInteger longNamesButtonIndex = 2;
 // #warning Incomplete implementation, return the number of sections
     return [self.filteredNames count];
 }
-/*
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    // 搜索不到内容的问题在这里
+    return [self.filteredNames count];
 }
-*/
+
 - (instancetype)initWithName:(NSDictionary *)names keys:(NSArray *)keys {
     if (self = [super initWithStyle:UITableViewStylePlain]) {
         self.names = names;
