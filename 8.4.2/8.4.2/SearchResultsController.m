@@ -54,6 +54,7 @@ static const NSInteger longNamesButtonIndex = 2;
     return [self.filteredNames count];
 }
 
+// 返回searchResults结果个数
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // 搜索不到内容的问题在这里
     return [self.filteredNames count];
@@ -68,6 +69,7 @@ static const NSInteger longNamesButtonIndex = 2;
     return self;
 }
 
+// 搜索框里面的内容有变化了
 - (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
     NSString *searchString = searchController.searchBar.text;
     NSInteger buttonIndex = searchController.searchBar.selectedScopeButtonIndex;
