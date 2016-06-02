@@ -71,6 +71,7 @@ static const NSInteger longNamesButtonIndex = 2;
 
 // 搜索框里面的内容有变化了
 - (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
+    
     NSString *searchString = searchController.searchBar.text;
     NSInteger buttonIndex = searchController.searchBar.selectedScopeButtonIndex;
     [self.filteredNames removeAllObjects];
@@ -97,6 +98,8 @@ static const NSInteger longNamesButtonIndex = 2;
     cell.textLabel.text = self.filteredNames[indexPath.row];
     return cell;
 }
+
+
 
 
 /*

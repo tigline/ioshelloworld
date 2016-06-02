@@ -42,8 +42,14 @@ static NSString *SectionsTableIdentifier = @"SectionsTableIdentifier";
     UISearchBar *searchBar = self.searchController.searchBar;
     searchBar.scopeButtonTitles = @[@"All", @"Short", @"Long"];
     searchBar.placeholder = @"搜索框";
+    // 设置搜索框里面的文字
+    // [searchBar setText:@"取消"];
     // 根据searchBar实际大小给searchBar一个合适的布局大小
     // http://www.07net01.com/2014/09/180586.html 要翻墙。
+    NSLog(@"%@", searchBar.subviews);
+    
+    
+    
     [searchBar sizeToFit];
     self.tableView.tableHeaderView = searchBar;
     self.searchController.searchResultsUpdater = resultsController;
