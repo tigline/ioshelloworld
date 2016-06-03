@@ -120,8 +120,8 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Sm8-e9-PlR" kind="show" id="QYc-ED-V53"/>
-                                    <segue destination="d0a-PX-9T7" kind="show" trigger="accessoryAction" id="FQh-55-fSp"/>
+                                    <segue destination="Sm8-e9-PlR" kind="show" identifier="ShowFontSizes" id="QYc-ED-V53"/>
+                                    <segue destination="d0a-PX-9T7" kind="show" identifier="ShowFontInfo" trigger="accessoryAction" id="FQh-55-fSp"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -252,7 +252,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HAh-xT-SNH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2795" y="827"/>
+            <point key="canvasLocation" x="2769" y="736"/>
         </scene>
     </scenes>
 </document>

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FontInfoViewController : UITableViewController
+@interface FontInfoViewController : UIViewController
 
 @property (strong, nonatomic) UIFont *font;
 @property (assign, nonatomic) BOOL favorites;
