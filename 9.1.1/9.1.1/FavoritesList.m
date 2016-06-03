@@ -44,6 +44,7 @@
 - (void)saveFavorites {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:self.favorites forKey:@"favorites"];
+    // 同步NSUserDefaults
     [defaults synchronize];
 }
 
@@ -55,6 +56,13 @@
 
 - (void)removeFavorite:(id)item {
     [_favorites removeObject:item];
+    [self saveFavorites];
+}
+
+- (void)moveItemAtIndex:(NSInteger)from toIndex:(NSInteger)to {
+    id item = _favorites[from];
+    [_favorites removeObjectAtIndex:from];
+    [_favorites insertObject:item atIndex:to];
     [self saveFavorites];
 }
 

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "FavoritesList.h"
 
-@interface RootViewControllerTableViewController : UITableViewController
+@interface RootViewController : UITableViewController
 
 @property (copy, nonatomic) NSArray *familyNames;
 @property (assign, nonatomic) CGFloat cellPointSize;

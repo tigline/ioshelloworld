@@ -14,7 +14,10 @@
 		569AE3CE1CFFE014001F0C88 /* __1_1Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 569AE3CD1CFFE014001F0C88 /* __1_1Tests.m */; };
 		569AE3D91CFFE014001F0C88 /* __1_1UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 569AE3D81CFFE014001F0C88 /* __1_1UITests.m */; };
 		569AE3E81CFFFAE2001F0C88 /* FavoritesList.m in Sources */ = {isa = PBXBuildFile; fileRef = 569AE3E71CFFFAE2001F0C88 /* FavoritesList.m */; };
-		569AE3EB1D00088C001F0C88 /* RootViewControllerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 569AE3EA1D00088C001F0C88 /* RootViewControllerTableViewController.m */; };
+		569AE3EB1D00088C001F0C88 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 569AE3EA1D00088C001F0C88 /* RootViewController.m */; };
+		569AE3EE1D0021A5001F0C88 /* FontListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 569AE3ED1D0021A5001F0C88 /* FontListViewController.m */; };
+		56BA1B371D01322B00990DA7 /* FontSizesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BA1B361D01322B00990DA7 /* FontSizesViewController.m */; };
+		56BA1B3A1D01557600990DA7 /* FontInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 56BA1B391D01557600990DA7 /* FontInfoViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,8 +53,14 @@
 		569AE3DA1CFFE014001F0C88 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		569AE3E61CFFFAE2001F0C88 /* FavoritesList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritesList.h; sourceTree = "<group>"; };
 		569AE3E71CFFFAE2001F0C88 /* FavoritesList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesList.m; sourceTree = "<group>"; };
-		569AE3E91D00088C001F0C88 /* RootViewControllerTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewControllerTableViewController.h; sourceTree = "<group>"; };
-		569AE3EA1D00088C001F0C88 /* RootViewControllerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewControllerTableViewController.m; sourceTree = "<group>"; };
+		569AE3E91D00088C001F0C88 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		569AE3EA1D00088C001F0C88 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		569AE3EC1D0021A5001F0C88 /* FontListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontListViewController.h; sourceTree = "<group>"; };
+		569AE3ED1D0021A5001F0C88 /* FontListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontListViewController.m; sourceTree = "<group>"; };
+		56BA1B351D01322B00990DA7 /* FontSizesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontSizesViewController.h; sourceTree = "<group>"; };
+		56BA1B361D01322B00990DA7 /* FontSizesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontSizesViewController.m; sourceTree = "<group>"; usesTabs = 0; };
+		56BA1B381D01557600990DA7 /* FontInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FontInfoViewController.h; sourceTree = "<group>"; };
+		56BA1B391D01557600990DA7 /* FontInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FontInfoViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,14 +113,20 @@
 			children = (
 				569AE3B61CFFE014001F0C88 /* AppDelegate.h */,
 				569AE3B71CFFE014001F0C88 /* AppDelegate.m */,
-				569AE3BC1CFFE014001F0C88 /* Main.storyboard */,
 				569AE3BF1CFFE014001F0C88 /* Assets.xcassets */,
-				569AE3C41CFFE014001F0C88 /* Info.plist */,
-				569AE3B31CFFE014001F0C88 /* Supporting Files */,
 				569AE3E61CFFFAE2001F0C88 /* FavoritesList.h */,
 				569AE3E71CFFFAE2001F0C88 /* FavoritesList.m */,
-				569AE3E91D00088C001F0C88 /* RootViewControllerTableViewController.h */,
-				569AE3EA1D00088C001F0C88 /* RootViewControllerTableViewController.m */,
+				56BA1B381D01557600990DA7 /* FontInfoViewController.h */,
+				56BA1B391D01557600990DA7 /* FontInfoViewController.m */,
+				569AE3EC1D0021A5001F0C88 /* FontListViewController.h */,
+				569AE3ED1D0021A5001F0C88 /* FontListViewController.m */,
+				56BA1B351D01322B00990DA7 /* FontSizesViewController.h */,
+				56BA1B361D01322B00990DA7 /* FontSizesViewController.m */,
+				569AE3C41CFFE014001F0C88 /* Info.plist */,
+				569AE3BC1CFFE014001F0C88 /* Main.storyboard */,
+				569AE3E91D00088C001F0C88 /* RootViewController.h */,
+				569AE3EA1D00088C001F0C88 /* RootViewController.m */,
+				569AE3B31CFFE014001F0C88 /* Supporting Files */,
 			);
 			path = 9.1.1;
 			sourceTree = "<group>";
@@ -271,10 +286,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				569AE3EB1D00088C001F0C88 /* RootViewControllerTableViewController.m in Sources */,
+				56BA1B371D01322B00990DA7 /* FontSizesViewController.m in Sources */,
+				56BA1B3A1D01557600990DA7 /* FontInfoViewController.m in Sources */,
+				569AE3EB1D00088C001F0C88 /* RootViewController.m in Sources */,
 				569AE3E81CFFFAE2001F0C88 /* FavoritesList.m in Sources */,
 				569AE3B81CFFE014001F0C88 /* AppDelegate.m in Sources */,
 				569AE3B51CFFE014001F0C88 /* main.m in Sources */,
+				569AE3EE1D0021A5001F0C88 /* FontListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -492,6 +510,7 @@
 				569AE3DF1CFFE014001F0C88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		569AE3E01CFFE014001F0C88 /* Build configuration list for PBXNativeTarget "9.1.1Tests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +519,7 @@
 				569AE3E21CFFE014001F0C88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		569AE3E31CFFE014001F0C88 /* Build configuration list for PBXNativeTarget "9.1.1UITests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +528,7 @@
 				569AE3E51CFFE014001F0C88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

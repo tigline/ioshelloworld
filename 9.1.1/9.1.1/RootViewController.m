@@ -6,25 +6,25 @@
 //  Copyright © 2016年 moveclub. All rights reserved.
 //
 
-#import "RootViewControllerTableViewController.h"
+#import "RootViewController.h"
+#import "FavoritesList.h"
+#import "FontListViewController.h"
 
-@interface RootViewControllerTableViewController ()
+
+@interface RootViewController ()
 
 @end
 
-@implementation RootViewControllerTableViewController
+@implementation RootViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.familyNames = [[UIFont familyNames] sortedArrayUsingSelector:@selector(compare:)];
     UIFont *preferredTableViewFont = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
-    // 当前系统设置的字体大小
+    // 当前系统设置的字体大小 修改这个系统设置，好像是重启设备之后才生效
     self.cellPointSize = preferredTableViewFont.pointSize;
     self.favoritesList = [FavoritesList sharedFavoritesList];
-    
-    
-    
-    
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -75,15 +75,15 @@
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
     if (section == 0) {
         return @"All Font Families";
+    } else {
+        return @"My Favorite Fonts";
     }
-    return @"My Favorite Fonts";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *FamilyNameCell = @"FamilyName";
     static NSString *FavoritesCell = @"Favorites";
     UITableViewCell *cell = nil;
-    // 配置表单元？？？？什么鬼
     if (indexPath.section == 0) {
         cell = [tableView dequeueReusableCellWithIdentifier:FamilyNameCell forIndexPath:indexPath];
         cell.textLabel.font = [self fontForDisplayAtIndexPath:indexPath];
@@ -96,58 +96,26 @@
 }
 
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
-}
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
+// 点击了一行。对下个页面的FontListViewController进行初始化
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSLog(@"prepareForSegue   %@", sender);
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+    FontListViewController *listVC = segue.destinationViewController;
+    if (indexPath.section == 0) {
+        NSString *familyName = self.familyNames[indexPath.row];
+        listVC.fontNames = [[UIFont fontNamesForFamilyName:familyName] sortedArrayUsingSelector:@selector(compare:)];
+        listVC.navigationItem.title = familyName;
+        listVC.showsFavorites = NO;
+    } else {
+        listVC.fontNames = self.favoritesList.favorites;
+        listVC.navigationItem.title = @"Favorites";
+        listVC.showsFavorites = YES;
+    }
 }
-*/
+
 
 @end
