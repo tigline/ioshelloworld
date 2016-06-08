@@ -39,7 +39,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="FIo-eJ-fPf" kind="show" id="wkv-EI-avk"/>
+                                    <segue destination="FIo-eJ-fPf" kind="show" id="ZLz-CN-3RJ"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Favorites" textLabel="GdL-Zv-A8O" style="IBUITableViewCellStyleDefault" id="aOi-ze-3FU">
@@ -58,6 +58,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="FIo-eJ-fPf" kind="show" id="gn0-Vl-UGb"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -177,7 +180,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OOX-JO-7gI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2769" y="41"/>
+            <point key="canvasLocation" x="2620" y="342"/>
         </scene>
         <!--Font Info View Controller-->
         <scene sceneID="mpt-En-Y1Z">
@@ -252,7 +255,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HAh-xT-SNH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2769" y="736"/>
+            <point key="canvasLocation" x="1949" y="1048"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ZLz-CN-3RJ"/>
+    </inferredMetricsTieBreakers>
 </document>

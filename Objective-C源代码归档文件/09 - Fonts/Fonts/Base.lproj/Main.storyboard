@@ -120,7 +120,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NUg-lN-9cy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1173" y="408"/>
+            <point key="canvasLocation" x="1232" y="408"/>
         </scene>
         <!--Font Sizes View Controller-->
         <scene sceneID="B4a-eS-hvp">
@@ -164,7 +164,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AaT-MN-O7A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1990" y="374"/>
+            <point key="canvasLocation" x="1938" y="408"/>
         </scene>
         <!--Font Info View Controller-->
         <scene sceneID="7MW-OA-U8J">
@@ -247,7 +247,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g8S-iU-G3E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2497" y="608"/>
+            <point key="canvasLocation" x="1232" y="1151"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pWK-Vg-4Vn">

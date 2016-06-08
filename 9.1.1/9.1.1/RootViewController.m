@@ -13,6 +13,11 @@
 
 @interface RootViewController ()
 
+
+@property (copy, nonatomic) NSArray *familyNames;
+@property (assign, nonatomic) CGFloat cellPointSize;
+@property (strong, nonatomic) FavoritesList *favoritesList;
+
 @end
 
 @implementation RootViewController
@@ -43,8 +48,9 @@
 // #warning Incomplete implementation, return the number of sections
     if ([self.favoritesList.favorites count] > 0) {
         return 2;
+    } else {
+        return 1;
     }
-    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -72,12 +78,12 @@
 /**
  *  section title name
  */
-- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section {
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    NSLog(@"%ld", (long)section);
     if (section == 0) {
         return @"All Font Families";
-    } else {
-        return @"My Favorite Fonts";
     }
+    return @"My Favorite Fonts";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

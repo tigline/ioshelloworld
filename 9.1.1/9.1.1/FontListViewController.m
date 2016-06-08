@@ -22,9 +22,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    // 生气中，教材里面没有这个判断
+    if ([[[FavoritesList sharedFavoritesList] favorites] count] > 0) {
+        self.showsFavorites = YES;
+    }
     UIFont *preferredTeableViewFont = [UIFont preferredFontForTextStyle:UIFontTextStyleHeadline];
     self.cellPointSize = preferredTeableViewFont.pointSize;
+    
+    
+    // 周六下午加的，不起作用
+    if (self.showsFavorites) {
+        self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    }
     
     
     // Uncomment the following line to preserve selection between presentations.
@@ -70,53 +79,6 @@
 }
 
 
-
-
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
-}
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -134,14 +96,31 @@
         infoVC.favorites = [[FavoritesList sharedFavoritesList].favorites containsObject:font.fontName];
         
     }
-    
-    
-    
-    
 }
 
 
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"%@", self.showsFavorites?@"YES":@"NO");
+    return self.showsFavorites;
+}
 
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (!self.showsFavorites) {
+        return;
+    }
+    
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        NSString *favorite = self.fontNames[indexPath.row];
+        [[FavoritesList sharedFavoritesList] removeFavorite:favorite];
+        self.fontNames = [FavoritesList sharedFavoritesList].favorites;
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return @"删除";
+}
 
 
 @end

@@ -11,9 +11,7 @@
 
 @interface RootViewController : UITableViewController
 
-@property (copy, nonatomic) NSArray *familyNames;
-@property (assign, nonatomic) CGFloat cellPointSize;
-@property (strong, nonatomic) FavoritesList *favoritesList;
+
 
 
 @end

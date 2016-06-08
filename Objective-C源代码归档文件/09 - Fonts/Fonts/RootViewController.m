@@ -49,7 +49,7 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+- (NSInteger)fnumberOfRowsInSection:(UITableView *)tableView {
     // Return the number of sections.
     if ([self.favoritesList.favorites count] > 0) {
         return 2;
